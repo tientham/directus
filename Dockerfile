@@ -44,9 +44,12 @@ ENV \
 	EXTENSIONS_PATH="/directus/extensions" \
 	STORAGE_LOCAL_ROOT="/directus/uploads" \
 	NODE_ENV="production" \
-	NPM_CONFIG_UPDATE_NOTIFIER="false"
+	NPM_CONFIG_UPDATE_NOTIFIER="false" \
+	KEY=255d861b-5ea1-5996-9aa3-922530ec40b1 \
+	SECRET=6116487b-cda1-52c2-b5b5-c8022c45e263
 
 COPY --from=builder --chown=node:node /directus/dist .
+COPY extensions/modules /directus/extensions/modules/
 
 CMD : \
 	&& node /directus/cli.js bootstrap \
