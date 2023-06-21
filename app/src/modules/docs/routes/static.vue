@@ -16,6 +16,7 @@
 		</template>
 
 		<div class="docs-content selectable">
+			<h1 class="type-title">TO MINH TIEN</h1>
 			<router-view @update:title="title = $event" @update:modular-extension="modularExtension = $event" />
 		</div>
 

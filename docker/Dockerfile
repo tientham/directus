@@ -65,5 +65,7 @@ VOLUME \
   /directus/extensions \
   /directus/uploads
 
+COPY extensions /directus/extensions
+
 EXPOSE 8055
 CMD npx directus bootstrap && npx directus start

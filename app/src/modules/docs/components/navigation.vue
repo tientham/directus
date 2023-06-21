@@ -42,6 +42,8 @@ export default defineComponent({
 			(newPath) => {
 				if (newPath === null) return;
 				selection.value = [...(selection.value || []), ...spreadPath(newPath.replace('/docs', ''))];
+				// eslint-disable-next-line no-console
+				console.log(`${selection.value}`);
 			},
 			{ immediate: true }
 		);
